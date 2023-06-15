@@ -1,8 +1,16 @@
+package game;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Kingdom {
 	private String nameK;
+	List<Frontier> frontiers;
 	
 	public Kingdom(String nameK) {
 		this.setNameK(nameK);
+		this.frontiers = new ArrayList<Frontier>();
+		
 	}
 
 	public String getNameK() {
@@ -13,25 +21,11 @@ public class Kingdom {
 		this.nameK = nameK;
 	}
 	
+	public void makeFrontiers(Kingdom destination, int cost) {
+		Frontier frontier = new Frontier(destination, cost);
+		frontiers.add(frontier);
+	}
+	
+	
 }
 
-public class HashMap {
-	
-	Kingdom UBU = new Kingdom("UBU");
-	Kingdom KLE = new Kingdom("KLE");
-	Kingdom PNE = new Kingdom("PNE");
-	Kingdom PGR = new Kingdom("PGR");
-	Kingdom PDO = new Kingdom("PDO");
-	Kingdom KLA = new Kingdom("KLA");
-	Kingdom GDS = new Kingdom("GDS");
-	Kingdom KOL = new Kingdom("KOL");
-	Kingdom DEF = new Kingdom("DEF");
-	Kingdom KKA = new Kingdom("KKA");
-	Kingdom ALE = new Kingdom("ALE");
-	Kingdom PKR = new Kingdom("PKR");
-	Kingdom VEM = new Kingdom("VEM");
-	Kingdom CSU = new Kingdom("CSU");
-	Kingdom PKS = new Kingdom("PKS");
-	Kingdom BUN = new Kingdom("BUN");
-	Kingdom NAR = new Kingdom("NAR");
-	
