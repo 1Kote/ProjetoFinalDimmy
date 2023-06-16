@@ -134,16 +134,26 @@ public class MainTeste {
 	public static void initiatePlay(Kingdom initialLoc, int initialMoney) {
 		Kingdom currentLoc = initialLoc;
 		int Money = initialMoney;
+		Scanner scn = new Scanner(System.in);
 		
+		while(true){
 		System.out.println("loc atual " + currentLoc.getNameK());
 		System.out.println("dinheiro atual " + Money);
 		List<Frontier> frontiers = currentLoc.frontiers;
+			
 		for (int i = 0; i < frontiers.size();i++) {
 			Frontier frontier = frontiers.get(i);
 			System.out.print((i+1) + ".Reino " + frontier.destination.getNameK() + "(custo: " + frontier.getCost() +")");
 		}
+
+		int choice = scn.nextInt();
+                Frontier choicedKingdom = frontiers.get(choice - 1);
 		
+		currentLoc = choicedKingdom.destination;
 		
+		System.out.println("VIAJANDO PARA: " + currentLoc.getNameK());   
+			
+		}
 	}
 	
 }
