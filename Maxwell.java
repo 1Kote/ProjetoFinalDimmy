@@ -44,11 +44,11 @@ public void setPowerthreshold(int powerthreshold) {
 	this.powerthreshold = powerthreshold;
 }
 
-public void realizarMissao(Missao missao) {
+public void accomplishMission(Mission mission) {
 	//
 }
 
-public void trocarMoedasLimiar(boolean aceitaMissao, boolean distanciaMenorTres) {
+public void exchangeCoinsL(boolean //add nome aceitar missao , boolean //add nome setado da distancia// ) {
 	//
 }
                                                                              
