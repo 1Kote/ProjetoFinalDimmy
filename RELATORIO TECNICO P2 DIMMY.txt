@@ -1,0 +1,21 @@
+Grupo - Daniel Nascimento Araujo, Sergio Mendes, Enzo Guimaraes, Theodoro Tajra
+
+
+1. Resumo: Nossa ideia desde o começo foi realizar o projeto de maneira mais otimizada e mutavel até o limite do nosso conhecimento. Nossos objetivos foram, dividir elementos essenciais do projeto em classes 
+para facil manipulacao e organização, criar as fronteiras utilizando nós para ficarem organizadas e serem facilmente manipuladas. Tinhamos como objetivo criar uma interface porém não ficou boa o suficiente então 
+descartamos essa ideia. 
+
+2. Introdução: O projeto iniciado na data 17/05 quando nos foi passado o trabalho de avaliação pelo Professor/Coordenador Dimmy Magalhães valendo a nota da p2. O projeto passado teve todos seus requisitos bem definidos 
+na documentação dos requisitos do projeto que foram seguidos até o seu termino. 
+
+3. Descrição do Projeto: O projeto foi divido em classes. Classe Maxwell para representar o jogador possuindo seus atribitos espeficicos. Classe Kingdom. 
+
+4. Descrição da equipe: A equipe foi divida na seguinte maneira: Sergio Mendes trabalhou na codificação do mapa e dos nós das fronteiras. Enzo Guimarães também trabalhou com a parte de progamação auxiliando a equipe principalmente 
+no quesito de pesquisas e codificação. Daniel trabalhou na parte de codificação, pesquisa e na tentativa de criação de interface. Theodoro trabalhou na codificação criando a classe e atributos do mercador assim como em suas 
+interações com outras classes.
+
+5. Metodologia: Fizemos reuniões diarias e semanais via discord e presencial, onde escolhiamos 2 pessoas para progamar e os outros 2 auxiliavam em qualquer tipo de problema ou pesquisa para futuras implementações do projeto. 
+Nos utilizamos a IDE Eclipse para progamação em Java, o Framework utilizado foi o Collection que engloba o package Java.util* e Java.swing*(este não chegou a ser utilizado no produto final), utilizamos github para armazenamento
+online e chatgpt para auxilio em caso de duvidas mais complexas ou falta de direcionamento. 
+
+9. Referências: Livro Algoritimos Teoria em pratica de Thomas Cormen, slides do Professor Dimmy, Canal RyiSnow no YouTube, 
