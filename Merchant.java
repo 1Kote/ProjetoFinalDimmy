@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Merchant {
     private Node rootNode;
 
@@ -36,6 +38,12 @@ public class Merchant {
         innerDecision4.yesNode = innerDecision4;
         innerDecision4.noNode = innerDecision4;
     }
+
+    public String lerRespostaDoUsuario() {
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine();
+    }
+
     public void playGame() {
         // Método para iniciar o nó atual sendo a raiz da árvore (rootNode). Depois há um loop usando while para continuar com as
         // perguntas da árvore até chegar em uma folha que tenha alguma recompensa.
@@ -44,7 +52,7 @@ public class Merchant {
             if (currentNode.question == "De onde você vem, e para onde você vai?") {
                 System.out.println(currentNode.question);
                 System.out.println("Responda com uma frase pequena, por favor.");
-                String anser = lerRespostaDoUsuario();
+                String answer = lerRespostaDoUsuario();
                 // Avaliação do destino para retornar verdadeiro ou falso.
                 currentNode = answer.contains("destino") ? currentNode.yesNode : currentNode.noNode; 
             } else {
