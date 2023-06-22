@@ -41,7 +41,9 @@ public class Merchant {
 
     public String lerRespostaDoUsuario() {
         Scanner sc = new Scanner(System.in);
-        return sc.nextLine();
+        String resposta = sc.nextLine();
+        sc.close();
+        return resposta;
     }
 
     public void playGame() {
