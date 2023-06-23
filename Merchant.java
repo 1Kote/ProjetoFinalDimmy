@@ -51,7 +51,7 @@ public class Merchant {
         // perguntas da árvore até chegar em uma folha que tenha alguma recompensa.
         Node currentNode = rootNode;
         while (currentNode.reward == null) {
-            if (currentNode.question == "De onde você vem, e para onde você vai?") {
+            if (currentNode.question.equals("De onde você vem, e para onde você vai?")) {
                 System.out.println(currentNode.question);
                 System.out.println("Responda com uma frase pequena, por favor.");
                 String answer = lerRespostaDoUsuario();
