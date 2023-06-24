@@ -4,11 +4,12 @@ public class Frontier {
 	
 	Kingdom destination;
 	private int cost;
+	int powerGem;
 	
-	public Frontier(Kingdom destination, int cost) {
+	public Frontier(Kingdom destination, int cost, int powerGem) {
 		this.destination = destination;
 		this.setCost(cost);
-		
+		this.powerGem = powerGem;
 	}
 
 	public int getCost() {
