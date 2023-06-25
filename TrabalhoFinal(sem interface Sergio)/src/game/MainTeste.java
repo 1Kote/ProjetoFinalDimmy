@@ -154,6 +154,9 @@ public class MainTeste {
 		Mission mission1 = missions.get(0);
 		Mission mission2 = missions.get(1);
 		Mission mission3 = missions.get(2);
+		mission1.isComplete = false;
+		mission2.isComplete = false;
+		mission3.isComplete = false;
 		
 		Scanner scn = new Scanner(System.in);
 		
@@ -238,10 +241,6 @@ public class MainTeste {
 						}
 					}
 				}
-				if (mission1.isComplete = false) {
-					System.out.println("Missão já concluida nesse reino");
-				}
-				
 			}
 			
 			if(currentLoc == mission1.missionDest) {
@@ -251,6 +250,8 @@ public class MainTeste {
 						System.out.println("Premio: + " + mission1.coinReward + " Moedas" + " + " + mission1.powerReward + "Limite de Poder");
 						coins += mission1.coinReward;
 						powerLimit += mission1.powerReward;
+						inMission = false;
+						mission1.isComplete = true;
 					}
 					if(mission1.isComplete == true) {
 						System.out.println(" ");
@@ -317,10 +318,6 @@ public class MainTeste {
 						}
 					}
 				}
-				if (mission1.isComplete = false) {
-					System.out.println("Missão já concluida nesse reino");
-				}
-				
 			}
 			
 			if(currentLoc == mission2.missionDest) {
@@ -328,8 +325,10 @@ public class MainTeste {
 					if (mission2.isComplete == false) {
 						System.out.println("Você chegou em "+ currentLoc.getNameK());
 						System.out.println("Premio: + " + mission2.coinReward + " Moedas" + " + " + mission2.powerReward + "Limite de Poder");
-						coins += mission1.coinReward;
-						powerLimit += mission1.powerReward;
+						coins += mission2.coinReward;
+						powerLimit += mission2.powerReward;
+						inMission = false;
+						mission2.isComplete = true;
 					}
 					if(mission2.isComplete == true) {
 						System.out.println(" ");
@@ -343,7 +342,7 @@ public class MainTeste {
 			
 			//MISSÃO 3
 			if((currentLoc == mission3.miissionOrigin)) {
-				if (mission2.isComplete == false) {
+				if (mission3.isComplete == false) {
 					if (inMission == true) {
 						System.out.println("Há uma missão disponivel nesta localização");
 						System.out.println("Deseja cancelar a missão atual?");
@@ -388,7 +387,7 @@ public class MainTeste {
 							System.out.println("Missão aceita!");
 							inMission = true;
 							System.out.println("Premio por aceitar: "+ mission3.aceptReward + " Moedas");
-							coins += mission2.aceptReward;
+							coins += mission3.aceptReward;
 						}
 						}
 					if (choiceMission == 2) {
@@ -396,10 +395,6 @@ public class MainTeste {
 						}
 					}
 				}
-				if (mission1.isComplete = false) {
-					System.out.println("Missão já concluida nesse reino");
-				}
-				
 			}
 			
 			if(currentLoc == mission3.missionDest) {
@@ -407,8 +402,10 @@ public class MainTeste {
 					if (mission3.isComplete == false) {
 						System.out.println("Você chegou em "+ currentLoc.getNameK());
 						System.out.println("Premio: + " + mission3.coinReward + " Moedas" + " + " + mission3.powerReward + "Limite de Poder");
-						coins += mission1.coinReward;
-						powerLimit += mission1.powerReward;
+						coins += mission3.coinReward;
+						powerLimit += mission3.powerReward;
+						inMission = false;
+						mission3.isComplete = true;
 					}
 					if(mission3.isComplete == true) {
 						System.out.println(" ");
