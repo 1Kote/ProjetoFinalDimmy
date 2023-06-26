@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Kingdom {
 	private String nameK;
-	private boolean jaPassou;
+	private boolean talked;
 	List<Frontier> frontiers;
 	
 	
 	public Kingdom(String nameK, boolean jaaPassou) {
 		this.setNameK(nameK);
-		this.jaPassou = jaPassou;
+		this.talked = talked;
 		this.frontiers = new ArrayList<Frontier>();
 	}
 
@@ -24,11 +24,11 @@ public class Kingdom {
 	}
 	
 	public boolean isJaPassou() {
-		return jaPassou;
+		return talked;
 	}
 
 	public void setJaPassou(boolean jaPassou) {
-		this.jaPassou = jaPassou;
+		this.talked = jaPassou;
 	}
 
 	public void makeFrontiers(Kingdom destination, int cost, int powerGem) {
