@@ -5,6 +5,7 @@ public class Maxwell {
 	private int powerJoia;
 	private int powerthreshold;
 
+//Atributos do maxwell
 public Maxwell() {
 	currentCity = "00-UBU";
 	transportCoin = 3;
@@ -57,14 +58,12 @@ public void accomplishMission(Mission mission) {
 		powerthreshold += mission.get.ThresholdIncrease();
 		System.out.printlln("Prêmio da missão recebido!")
 		
-		//especificidades da missão, caso tenha
-		//atualizar outros atributos
-		
 	} else{
 		System.out.println("Moedas insuficientes para realizar missão!")
 	}
 }
 
+	//Metodo para realizr troca de moedas
 public void exchangeCoinsL(int amountCoins) {
 	if(transportCoin >= amountCoins){
 		// verificar se a distancia é menor que 3
@@ -82,7 +81,7 @@ public void exchangeCoinsL(int amountCoins) {
 			powerthreshold -= 2;
 		}
 			System.out.println("Limiar de poder da jóia atualizado: " + limiarPoder);
-			//mais ações sobre a troca de moedas por poder
+			
 		} else {
 			System.out.println("A quantidade de moedas e a distância não estão de acordo com as regras para trocar por limiar.")
 				
