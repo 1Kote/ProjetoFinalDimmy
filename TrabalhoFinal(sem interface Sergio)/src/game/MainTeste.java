@@ -274,9 +274,12 @@ public class MainTeste {
 				}
 			}
 			
-			if(currentLoc == mission1.missionDest) {//TESTE SE LOC ATUAL É A IGUAL A LOC DO DESTINO DA MISSÃO
-				if (inMission == true) {//SE A MMISSÃO ESTÁ EM ANDAMENTO
-					if (mission1.isComplete == false) {//SE A MISSÃO JÁ FOI CONCLUIDA
+            // TESTE SE LOC ATUAL É A IGUAL A LOC DO DESTINO DA MISSÃO
+			if (currentLoc == mission1.missionDest) {
+                // SE A MMISSÃO ESTÁ EM ANDAMENTO
+				if (inMission == true) {
+                    // SE A MISSÃO JÁ FOI CONCLUIDA
+					if (mission1.isComplete == false) {
 						System.out.println("Você chegou em "+ currentLoc.getNameK());
 						System.out.println("Premio: + " + mission1.coinReward + " Moedas" + " + " + mission1.powerReward + " Limite de Poder");
 						coins += mission1.coinReward;
@@ -297,7 +300,7 @@ public class MainTeste {
 			//OBSERVAÇÃO: PADRÃO A CIMA SEGUE PARA AS DEMAIS MISSÕES
 			
 			//MISSÃO 2
-			if((currentLoc == mission2.missionOrigin)) {
+			if(currentLoc == mission2.missionOrigin) {
 				if (mission2.isComplete == false) {
 					if (inMission == true) {
 						System.out.println("Há uma missão disponivel nesta localização");
@@ -324,7 +327,7 @@ public class MainTeste {
 									coins += mission2.aceptReward;
 								}
 							}
-							if(choiceMission == 2) {
+							if (choiceMission == 2) {
 								System.out.println("Missão recusada");
 							}
 						}
@@ -354,7 +357,7 @@ public class MainTeste {
 				}
 			}
 			
-			if(currentLoc == mission2.missionDest) {
+			if (currentLoc == mission2.missionDest) {
 				if (inMission == true) {
 					if (mission2.isComplete == false) {
 						System.out.println("Você chegou em "+ currentLoc.getNameK());
@@ -364,7 +367,7 @@ public class MainTeste {
 						inMission = false;
 						mission2.isComplete = true;
 					}
-					if(mission2.isComplete == true) {
+					if (mission2.isComplete == true) {
 						System.out.println(" ");
 					}
 				}
@@ -375,7 +378,7 @@ public class MainTeste {
 			}
 			
 			//MISSÃO 3
-			if((currentLoc == mission3.missionOrigin)) {
+			if (currentLoc == mission3.missionOrigin) {
 				if (mission3.isComplete == false) {
 					if (inMission == true) {
 						System.out.println("Há uma missão disponivel nesta localização");
@@ -442,7 +445,7 @@ public class MainTeste {
 						inMission = false;
 						mission3.isComplete = true;
 					}
-					if(mission3.isComplete == true) {
+					if (mission3.isComplete == true) {
 						System.out.println(" ");
 					}
 				}
@@ -462,14 +465,10 @@ public class MainTeste {
 				System.out.println("Ola, quantas Moedas vc possui?");
 				int input = scn.nextInt();
 				
-				if(input != coins) 
-				{
+				if (input != coins) {
 					System.out.println("O mercador também é um mago estudioso da clarividencia e sabe que você está mentindo!");
 					System.out.println("Mentiroso! Você possui " + coins + " moedas!");
-					
-				}
-				else if(input == coins) 
-				{
+				} else if (input == coins) {
 					System.out.println("Agradeço pela sinceridade!");
 				}
 				
@@ -482,6 +481,7 @@ public class MainTeste {
 					System.out.println((i+1) + ".Reino: " + frontier.destination.getNameK() + "(custo: " + frontier.getCost() +") " + "(Poder ganho/perdido: " + frontier.powerGem + ")" );    
 						
 				}
+                // Scanner para ler a escolha do usuário
 				int choiceMerchant = scn.nextInt();
 				Frontier choicedMerchant = frontiers.get(choiceMerchant - 1);
 				int range = choicedMerchant.powerGem;
@@ -572,7 +572,8 @@ public class MainTeste {
 			currentLoc = choicedKingdom.destination;		
 			System.out.println("VIAJANDO PARA: " + currentLoc.getNameK());
 			
-			if(powerGem < 0) {//TESTE PARA COLOCAR O PODER DA JOIA IGUAL A 0 QUANDO A MESMA DICAR MENOR QUE 0
+            // TESTE PARA COLOCAR O PODER DA JOIA IGUAL A 0 QUANDO A MESMA DICAR MENOR QUE 0
+			if(powerGem < 0) {
 				powerGem = 0;
 			}
 		
