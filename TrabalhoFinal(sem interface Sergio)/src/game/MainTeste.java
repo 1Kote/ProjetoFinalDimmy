@@ -485,20 +485,60 @@ public class MainTeste {
 				int choiceMerchant = scn.nextInt();
 				Frontier choicedMerchant = frontiers.get(choiceMerchant - 1);
 				int range = choicedMerchant.powerGem;
-				if ((coins < 5) && (range < 3)) {
-					System.out.println("MERCADOR: Você deseja trocar moedas por limiar de joia?");
-					System.out.println("(1- SIM | 2-NÃO");
+				    if (coins < 5 || range < 3) {
+        				System.out.println("MERCADOR: Você deseja trocar moedas por limiar de joia?");
+       					System.out.println("Digite 1 para SIM ou digite 2 para NÃO");
 					int answer = scn.nextInt();
-					if(answer == 1) {
-						coins -= 1;
-						powerLimit += 1;
-					}
-					if(answer == 2) {
-						coins -= 1;
-					}
-				}
+					
+					        if(answer == 1) {
+					            coins -= 1;
+					            powerLimit += 1;
+					        } else if (answer == 2) {
+					            coins -= 1;
+					        }
+					    
+					    }
+
+				    if (coins < 5 || range <= 5) {
+				        System.out.println("MERCADOR: Você deseja trocar moedas por limiar de joia?");
+				        System.out.println("Digite 1 para SIM ou digite 2 para NÃO");
+				        int answer = scn.nextInt();
 				
-			}
+				        if (answer == 1) {
+				            coins -= 1;
+				            powerLimit += 2;
+				        } else if (answer == 2) {
+				            coins += 2;
+				        }
+				    }
+				
+				    if (coins >= 5 || range > 3) {
+				        System.out.println("MERCADOR: Você deseja trocar moedas por limiar de joia?");
+				        System.out.println("Digite 1 para SIM ou digite 2 para NÃO");
+				        int answer = scn.nextInt();
+				
+				        if (answer == 1) {
+				            coins -= 3;
+				            powerLimit += 2;
+				        } else if (answer == 2) {
+				            coins -= 2;
+				        }
+				    }
+				
+				    if (coins >= 5 || range >= 3) {
+				        System.out.println("MERCADOR: Você deseja trocar moedas por limiar de joia?");
+				        System.out.println("Digite 1 para SIM ou digite 2 para NÃO");
+				        int answer = scn.nextInt();
+				
+				        if (answer == 1) {
+				            coins -= 1;
+				            powerLimit += 3;
+				        } else if (answer == 2) {
+				            coins -= 3;
+				        }
+				    }
+								
+							}
 			
 			
 			
