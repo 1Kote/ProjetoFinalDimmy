@@ -137,21 +137,7 @@ public class MainTeste {
 		NAR.makeFrontiers(ALE, 1, 1);
 		NAR.makeFrontiers(BUN, 1, 5);
 		NAR.makeFrontiers(PKR, 1, -2);
-		
-		//DISTANCIA ENTRE OS REINOS
-		
-		// UBUD
-		UBU.makeDistance(KLE, 0);
-		UBU.makeDistance(PNE, 0);
-		UBU.makeDistance(KOL, 1);
-		UBU.makeDistance(PGR, 1);
-		UBU.makeDistance(PDO, 1);
-		UBU.makeDistance(KLA, 2);
-		UBU.makeDistance(GDS, 2);
-		
-		
-		
-		
+				
 		
 		
 		
@@ -467,25 +453,52 @@ public class MainTeste {
 			}
 			
 			//MERCADOR
-			System.out.println("Ola, quantas Moedas vc possui?");
-			int input = scn.nextInt();
+			if (currentLoc == initialLoc) {
+				System.out.println(" ");
+			}
 			
-			if(input != coins) 
-			{
-				System.out.println("O mercador também é um mago estudioso da clarividencia e sabe que você está mentindo!");
-				System.out.println("Mentiroso! Você possui " + coins + " moedas!");
+			if (currentLoc != initialLoc) {
+				
+				System.out.println("Ola, quantas Moedas vc possui?");
+				int input = scn.nextInt();
+				
+				if(input != coins) 
+				{
+					System.out.println("O mercador também é um mago estudioso da clarividencia e sabe que você está mentindo!");
+					System.out.println("Mentiroso! Você possui " + coins + " moedas!");
+					
+				}
+				else if(input == coins) 
+				{
+					System.out.println("Agradeço pela sinceridade!");
+				}
+				
+				List<Frontier> frontiers = currentLoc.frontiers;
+				System.out.println("MERCADOR: De onde você vem e para onde você vai?");
+				System.out.println("MAXUEL: Eu venho de " + pastLoc + " e vou para:" );
+				System.out.println("Selecione um destino para ir:");
+				for (int i = 0; i < frontiers.size();i++) {
+					Frontier frontier = frontiers.get(i);
+					System.out.println((i+1) + ".Reino: " + frontier.destination.getNameK() + "(custo: " + frontier.getCost() +") " + "(Poder ganho/perdido: " + frontier.powerGem + ")" );    
+						
+				}
+				int choiceMerchant = scn.nextInt();
+				Frontier choicedMerchant = frontiers.get(choiceMerchant - 1);
+				int range = choicedMerchant.powerGem;
+				if ((coins < 5) && (range < 3)) {
+					System.out.println("MERCADOR: Você deseja trocar moedas por limiar de joia?");
+					System.out.println("(1- SIM | 2-NÃO");
+					int answer = scn.nextInt();
+					if(answer == 1) {
+						coins -= 1;
+						powerLimit += 1;
+					}
+					if(answer == 2) {
+						coins -= 1;
+					}
+				}
 				
 			}
-			else if(input == coins) 
-			{
-				System.out.println("Agradeço pela sinceridade!");
-			}
-			
-			
-			
-			
-			
-			
 			
 			
 			
@@ -527,10 +540,3 @@ public class MainTeste {
 				
 	}
 }
-			
-			
-			
-			
-			
-			
-			
